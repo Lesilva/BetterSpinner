@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">BetterSpinner</string>
+    <string name="app_name">BetterSpinner Demo</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_visit_repo">Visit Repo</string>
 </resources>
