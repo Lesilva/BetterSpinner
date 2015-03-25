@@ -1,4 +1,4 @@
-package com.weiwangcn.betterspinner;
+package com.weiwangcn.betterspinner.sample;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +7,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+
+import com.weiwang.betterspinner.library.material.MaterialBetterSpinner;
+import com.weiwangcn.betterspinner.R;
+import com.weiwangcn.betterspinner.library.BetterSpinner;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -26,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
 
-        String[] list = getResources().getStringArray(R.array.age);
+        String[] list = getResources().getStringArray(R.array.month);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, list);

@@ -1,17 +1,15 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "21.1.2"
+    buildToolsVersion "22.0.0"
 
     defaultConfig {
-        applicationId "com.weiwangcn.betterspinner.sample"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 1
+        versionName "1.0"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -23,7 +21,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.0.0'
-    compile 'com.jakewharton:butterknife:6.1.0'
-    compile project(':library')
-    compile project(':library-material')
+    compile 'com.rengwuxian.materialedittext:library:1.8.3'
 }

@@ -1,4 +1,4 @@
-package com.weiwangcn.betterspinner;
+package com.weiwang.betterspinner.library.material;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
