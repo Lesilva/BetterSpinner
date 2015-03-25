@@ -1,5 +1,6 @@
 # BetterSpinner
 ================
+If you like developing Android, you must "hate" Spinners. I had countless issues with Spinners and I decided to make a new one. BetterSpinner is using AutoCompleteTextView to do what a Spinner really should do. 
 
 ## License
 
