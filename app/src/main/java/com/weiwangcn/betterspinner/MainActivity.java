@@ -8,8 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 
-import java.util.ArrayList;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -20,13 +18,7 @@ public class MainActivity extends ActionBarActivity {
     BetterSpinner spinner1;
 
     @InjectView(R.id.spinner2)
-    BetterSpinner spinner2;
-
-    @InjectView(R.id.spinner3)
-    MaterialBetterSpinner spinner3;
-
-    @InjectView(R.id.spinner4)
-    MaterialBetterSpinner spinner4;
+    MaterialBetterSpinner spinner2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +33,7 @@ public class MainActivity extends ActionBarActivity {
 
         spinner1.setAdapter(adapter);
         spinner2.setAdapter(adapter);
-        spinner3.setAdapter(adapter);
-        spinner4.setAdapter(adapter);
+
     }
 
 

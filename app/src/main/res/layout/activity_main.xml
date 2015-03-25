@@ -1,85 +1,42 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-        <EditText
-            android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:hint="First Name" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:hint="Last Name" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:hint="Address" />
-
-        <com.weiwangcn.betterspinner.BetterSpinner
+    <com.weiwangcn.betterspinner.BetterSpinner
+        android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:hint="BetterSpinner"
-            android:id="@+id/spinner1" />
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="BetterSpinner" />
 
-        <com.weiwangcn.betterspinner.BetterSpinner
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:hint="BetterSpinner"
-            android:id="@+id/spinner2" />
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="Text Field" />
 
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="First Name"
-            app:floatingLabel="normal" />
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Last Name"
-            app:floatingLabel="normal" />
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Address"
-            app:floatingLabel="normal" />
-
-        <com.weiwangcn.betterspinner.MaterialBetterSpinner
+    <com.weiwangcn.betterspinner.MaterialBetterSpinner
+        android:id="@+id/spinner2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:id="@+id/spinner3"
-            android:hint="MaterialBetterSpinner"
-            app:floatingLabel="normal" />
+        android:hint="MaterialBetterSpinner"
+        app:floatingLabel="normal" />
 
-        <com.weiwangcn.betterspinner.MaterialBetterSpinner
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:id="@+id/spinner4"
-            android:hint="MaterialBetterSpinner"
-            app:floatingLabel="normal" />
+        android:hint="Text Field"
+        app:floatingLabel="normal" />
 
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
