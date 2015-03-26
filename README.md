@@ -1,8 +1,11 @@
 # BetterSpinner
-If you like developing Android, you must "hate" Spinners. I had countless issues with Spinners and I decided to make a new one. BetterSpinner is using AutoCompleteTextView to do what a Spinner really should do. 
+If you like developing Android, you must "hate" Spinners. I had countless issues with Spinners and I decided to make a new one. BetterSpinner is using AutoCompleteTextView to do what a Spinner really should do.
 
 ## Screenshots
 ![BetterSpinner](./screenshot/screenshot.gif)
+
+## Examples
+The demo is a showcase of the functionality of the library.
 
 ## Usage
 BetterSpinner can be used just like [AutoCompleteTextView](http://developer.android.com/reference/android/widget/AutoCompleteTextView.html).
@@ -26,11 +29,12 @@ or you can also store you arrays in arrays.xml and do something like this in you
 String[] COUNTRIES = getResources().getStringArray(R.array.countries_list);
 ```
 
-If you want to use material style AutoCompleteTextView, simplely replace BetterSpinner with MaterialBetterSpinner
+If you want to use material style AutoCompleteTextView, simplely replace BetterSpinner with MaterialBetterSpinner.
 
 ## Download
+I'm still working on push BetterSpinner to Maven Central.
 
-## Thanks to
+## Acknowledgements
 Thanks my girlfriend Wanrong(wt263@msstate.edu) for the icon :)
 
 Thanks [Matt](https://github.com/mattblang) for his inspiration
@@ -40,7 +44,7 @@ Thanks [Matt](https://github.com/mattblang) for his inspiration
 
 ## License
 
-    Copyright 2014 weiwangcn
+    Copyright 2014 Wei Wang
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
