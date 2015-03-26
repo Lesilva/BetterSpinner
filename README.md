@@ -1,6 +1,42 @@
 # BetterSpinner
-================
 If you like developing Android, you must "hate" Spinners. I had countless issues with Spinners and I decided to make a new one. BetterSpinner is using AutoCompleteTextView to do what a Spinner really should do. 
+
+## Screenshots
+![BetterSpinner](./screenshot/screenshot.gif)
+
+## Usage
+BetterSpinner can be used just like [AutoCompleteTextView](http://developer.android.com/reference/android/widget/AutoCompleteTextView.html).
+
+```java
+ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                 android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+         BetterSpinner textView = (BetterSpinner)
+                 findViewById(R.id.countries_list);
+         textView.setAdapter(adapter);
+     }
+
+     private static final String[] COUNTRIES = new String[] {
+         "Belgium", "France", "Italy", "Germany", "Spain"
+     };
+```
+
+or you can also store you arrays in arrays.xml and do something like this in your code
+
+```java
+String[] COUNTRIES = getResources().getStringArray(R.array.countries_list);
+```
+
+If you want to use material style AutoCompleteTextView, simplely replace BetterSpinner with MaterialBetterSpinner
+
+## Download
+
+## Thanks to
+Thanks my girlfriend Wanrong(wt263@msstate.edu) for the icon :)
+
+Thanks [Matt](https://github.com/mattblang) for his inspiration
+
+[MaterialEditText](https://github.com/rengwuxian/MaterialEditText)
+
 
 ## License
 
