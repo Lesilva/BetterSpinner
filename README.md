@@ -34,7 +34,21 @@ String[] COUNTRIES = getResources().getStringArray(R.array.countries_list);
 If you want to use material style AutoCompleteTextView, simplely replace BetterSpinner with MaterialBetterSpinner.
 
 ## Download
-I'm still working on push BetterSpinner to Maven Central.
+BetterSpinner is now pushed to Maven Central as an AAR, so you just need to add the following dependency to your `build.gradle`.
+gradle:
+
+For normal look use (BetterSpinner):
+
+```groovy
+compile 'com.weiwangcn.betterspinner:library:1.0.1'
+```
+
+For material look use (MaterrialBetterSpinner):
+```groovy
+compile 'com.weiwangcn.betterspinner:library-material:1.0.1'
+```
+Note: library-material has included [MaterialEditText](https://github.com/rengwuxian/MaterialEditText).
+
 
 ## Acknowledgements
 Thanks my girlfriend Wanrong(wt263@msstate.edu) for the icon :)
