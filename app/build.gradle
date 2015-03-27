@@ -8,8 +8,8 @@ android {
         applicationId "com.weiwangcn.betterspinner.sample"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 100
-        versionName "1.0.0"
+        versionName project.VERSION_NAME
+        versionCode Integer.parseInt(project.VERSION_CODE)
     }
 
     buildTypes {
