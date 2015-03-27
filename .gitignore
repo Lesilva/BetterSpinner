@@ -4,3 +4,6 @@
 .DS_Store
 /build
 *.iml
+*.ap_
+*.dex
+*.class
