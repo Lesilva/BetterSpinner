@@ -8,9 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 
-import com.weiwang.betterspinner.library.material.MaterialBetterSpinner;
 import com.weiwangcn.betterspinner.R;
 import com.weiwangcn.betterspinner.library.BetterSpinner;
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

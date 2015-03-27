@@ -1,4 +1,4 @@
-package com.weiwang.betterspinner.library.material;
+package com.weiwangcn.betterspinner.library.material;
 
 import android.content.Context;
 import android.graphics.Rect;

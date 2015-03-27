@@ -26,7 +26,7 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:hint="Text Field" />
 
-    <com.weiwang.betterspinner.library.material.MaterialBetterSpinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:id="@+id/spinner2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
