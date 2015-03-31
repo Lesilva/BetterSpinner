@@ -40,16 +40,12 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView {
                                   Rect previouslyFocusedRect) {
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
         if (focused) {
+            performFiltering("", 0);
             InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(getWindowToken(), 0);
             setKeyListener(null);
+            dismissDropDown();
         }
-    }
-
-    @Override
-    public void setOnClickListener(OnClickListener listener) {
-        super.setOnClickListener(listener);
-        performFiltering("", 0); //show everything in the list
     }
 
     @Override
