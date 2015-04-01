@@ -40,12 +40,12 @@ gradle:
 For normal look use (BetterSpinner):
 
 ```groovy
-compile 'com.weiwangcn.betterspinner:library:1.0.2'
+compile 'com.weiwangcn.betterspinner:library:1.0.4'
 ```
 
 For material look use (MaterrialBetterSpinner):
 ```groovy
-compile 'com.weiwangcn.betterspinner:library-material:1.0.2'
+compile 'com.weiwangcn.betterspinner:library-material:1.0.4'
 ```
 Note: library-material has included [MaterialEditText](https://github.com/rengwuxian/MaterialEditText).
 
