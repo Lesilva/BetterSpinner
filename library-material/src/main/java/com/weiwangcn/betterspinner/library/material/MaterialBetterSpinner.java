@@ -17,6 +17,7 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView {
 
     private static final int MAX_CLICK_DURATION = 200;
     private long startClickTime;
+    private boolean isPopup;
 
     public MaterialBetterSpinner(Context context) {
         super(context);
@@ -59,8 +60,14 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView {
             case MotionEvent.ACTION_UP: {
                 long clickDuration = Calendar.getInstance().getTimeInMillis() - startClickTime;
                 if (clickDuration < MAX_CLICK_DURATION) {
-                    requestFocus();
-                    showDropDown();
+                    if (isPopup) {
+                        dismissDropDown();
+                        isPopup = false;
+                    } else {
+                        requestFocus();
+                        showDropDown();
+                        isPopup = true;
+                    }
                 }
             }
         }

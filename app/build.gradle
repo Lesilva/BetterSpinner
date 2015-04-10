@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.weiwangcn.betterspinner.sample"
-        minSdkVersion 15
+        minSdkVersion 7
         targetSdkVersion 22
         versionName project.VERSION_NAME
         versionCode Integer.parseInt(project.VERSION_CODE)
