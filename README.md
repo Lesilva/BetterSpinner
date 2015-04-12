@@ -10,6 +10,10 @@ If you like developing Android, you must "hate" Spinners. I had countless issues
 ## Examples
 The demo is a showcase of the functionality of the library.
 
+Download the APK file here: [BetterSpinner.Demo-1.0.6.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.6/BetterSpinner.Demo-1.0.6.apk)
+
+or
+
  [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.weiwangcn.betterspinner.sample)
 
 ## Usage
