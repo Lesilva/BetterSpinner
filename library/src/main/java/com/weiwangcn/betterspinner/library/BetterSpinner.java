@@ -45,6 +45,8 @@ public class BetterSpinner extends AutoCompleteTextView {
             imm.hideSoftInputFromWindow(getWindowToken(), 0);
             setKeyListener(null);
             dismissDropDown();
+        } else {
+            isPopup = false;
         }
     }
 

@@ -46,6 +46,8 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView {
             imm.hideSoftInputFromWindow(getWindowToken(), 0);
             setKeyListener(null);
             dismissDropDown();
+        } else {
+            isPopup = false;
         }
     }
 
