@@ -4,15 +4,14 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 
 import java.util.Calendar;
 
-/**
- * Created by Wei on 2015/3/23.
- */
-public class BetterSpinner extends AutoCompleteTextView {
+public class BetterSpinner extends AutoCompleteTextView implements AdapterView.OnItemClickListener {
 
     private static final int MAX_CLICK_DURATION = 200;
     private long startClickTime;
@@ -20,14 +19,17 @@ public class BetterSpinner extends AutoCompleteTextView {
 
     public BetterSpinner(Context context) {
         super(context);
+        setOnItemClickListener(this);
     }
 
     public BetterSpinner(Context arg0, AttributeSet arg1) {
         super(arg0, arg1);
+        setOnItemClickListener(this);
     }
 
     public BetterSpinner(Context arg0, AttributeSet arg1, int arg2) {
         super(arg0, arg1, arg2);
+        setOnItemClickListener(this);
     }
 
     @Override
@@ -74,6 +76,11 @@ public class BetterSpinner extends AutoCompleteTextView {
         }
 
         return super.onTouchEvent(event);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        isPopup = false;
     }
 
 }
