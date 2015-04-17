@@ -10,7 +10,7 @@ If you like developing Android, you must "hate" Spinners. I had countless issues
 ## Examples
 The demo is a showcase of the functionality of the library.
 
-Download the APK file here: [BetterSpinner.Demo-1.0.6.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.6/BetterSpinner.Demo-1.0.6.apk)
+Download the APK file here: [BetterSpinner.Demo-1.0.7.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.7/BetterSpinner.Demo-1.0.7.apk)
 
 or
 
@@ -47,12 +47,12 @@ gradle:
 For normal look use (BetterSpinner):
 
 ```groovy
-compile 'com.weiwangcn.betterspinner:library:1.0.6'
+compile 'com.weiwangcn.betterspinner:library:1.0.7'
 ```
 
 For material look use (MaterrialBetterSpinner):
 ```groovy
-compile 'com.weiwangcn.betterspinner:library-material:1.0.6'
+compile 'com.weiwangcn.betterspinner:library-material:1.0.7'
 ```
 Note: library-material has included [MaterialEditText](https://github.com/rengwuxian/MaterialEditText).
 
