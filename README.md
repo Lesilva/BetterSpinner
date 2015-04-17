@@ -10,11 +10,11 @@ If you like developing Android, you must "hate" Spinners. I had countless issues
 ## Examples
 The demo is a showcase of the functionality of the library.
 
+[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.weiwangcn.betterspinner.sample)
+
+Or
+ 
 Download the APK file here: [BetterSpinner.Demo-1.0.7.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.7/BetterSpinner.Demo-1.0.7.apk)
-
-or
-
- [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.weiwangcn.betterspinner.sample)
 
 ## Usage
 BetterSpinner can be used just like [AutoCompleteTextView](http://developer.android.com/reference/android/widget/AutoCompleteTextView.html).
