@@ -31,12 +31,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="MaterialBetterSpinner"
-        app:floatingLabel="normal" />
+        app:met_floatingLabel="normal" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Text Field"
-        app:floatingLabel="normal" />
+        app:met_floatingLabel="normal" />
 
 </LinearLayout>

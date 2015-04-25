@@ -38,6 +38,8 @@ or you can also store you arrays in arrays.xml and do something like this in you
 String[] COUNTRIES = getResources().getStringArray(R.array.countries_list);
 ```
 
+For usage of MaterialEditText 2.0.3, check it out [here](https://github.com/rengwuxian/MaterialEditText/wiki)
+
 If you want to use material style AutoCompleteTextView, simplely replace BetterSpinner with MaterialBetterSpinner.
 
 ## Download
@@ -47,14 +49,14 @@ gradle:
 For normal look use (BetterSpinner):
 
 ```groovy
-compile 'com.weiwangcn.betterspinner:library:1.0.7'
+compile 'com.weiwangcn.betterspinner:library:1.0.8'
 ```
 
 For material look use (MaterrialBetterSpinner):
 ```groovy
-compile 'com.weiwangcn.betterspinner:library-material:1.0.7'
+compile 'com.weiwangcn.betterspinner:library-material:1.0.8'
 ```
-Note: library-material has included [MaterialEditText](https://github.com/rengwuxian/MaterialEditText).
+Note: library-material has included [MaterialEditText 2.0.3](https://github.com/rengwuxian/MaterialEditText).
 
 
 ## Acknowledgements

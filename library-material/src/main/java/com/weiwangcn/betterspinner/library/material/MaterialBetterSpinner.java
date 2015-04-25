@@ -2,6 +2,7 @@ package com.weiwangcn.betterspinner.library.material;
 
 import android.content.Context;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -83,6 +84,14 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         isPopup = false;
+    }
+
+    @Override
+    public void setCompoundDrawablesWithIntrinsicBounds(Drawable left, Drawable top, Drawable right, Drawable bottom) {
+        right = getContext().getResources().getDrawable(R.drawable.ic_expand_more_black_18dp);
+        if (right != null)
+            right.setAlpha(66);
+        super.setCompoundDrawablesWithIntrinsicBounds(left, top, right, bottom);
     }
 
 }
