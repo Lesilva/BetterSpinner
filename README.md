@@ -52,10 +52,29 @@ For normal look use (BetterSpinner):
 compile 'com.weiwangcn.betterspinner:library:1.0.8'
 ```
 
+If you have appcompat-v7 in your dependencies make sure to exclude it :
+
+```groovy
+compile ('com.weiwangcn.betterspinner:library:1.0.8') {
+    exclude group: 'com.android.support', module: 'appcompat-v7'
+}
+```
+
 For material look use (MaterrialBetterSpinner):
+
 ```groovy
 compile 'com.weiwangcn.betterspinner:library-material:1.0.8'
 ```
+
+If you have appcompat-v7 and MaterialEditText in your dependencies make sure to exclude them :
+
+```groovy
+compile ('com.weiwangcn.betterspinner:library-material:1.0.8') {
+    exclude group: 'com.android.support', module: 'appcompat-v7'
+    exclude group: 'com.rengwuxian.materialedittext', module: 'library'
+}
+```
+
 Note: library-material has included [MaterialEditText 2.0.3](https://github.com/rengwuxian/MaterialEditText).
 
 
