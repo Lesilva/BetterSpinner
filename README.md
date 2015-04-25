@@ -14,7 +14,7 @@ The demo is a showcase of the functionality of the library.
 
 Or
  
-Download the APK file here: [BetterSpinner.Demo-1.0.7.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.7/BetterSpinner.Demo-1.0.7.apk)
+Download the APK file here: [BetterSpinner.Demo-1.0.8.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.8/BetterSpinner.Demo-1.0.8.apk)
 
 ## Usage
 BetterSpinner can be used just like [AutoCompleteTextView](http://developer.android.com/reference/android/widget/AutoCompleteTextView.html).
