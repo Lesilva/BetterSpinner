@@ -92,7 +92,7 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
         Drawable dropdownIcon = ContextCompat.getDrawable(getContext(), R.drawable.ic_expand_more_black_18dp);
         if (dropdownIcon != null) {
             right = dropdownIcon;
-            right.setAlpha(66);
+            right.mutate().setAlpha(66);
         }
         super.setCompoundDrawablesWithIntrinsicBounds(left, top, right, bottom);
     }
