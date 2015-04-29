@@ -16,7 +16,7 @@ The demo is a showcase of the functionality of the library.
 
 Or
  
-Download the APK file here: [BetterSpinner.Demo-1.0.9.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.0.9/BetterSpinner.Demo-1.0.9.apk)
+Download the APK file here: [BetterSpinner.Demo-1.1.0.apk](https://github.com/Lesilva/BetterSpinner/releases/download/1.1.0/BetterSpinner.Demo-1.1.0.apk)
 
 ## Usage
 BetterSpinner can be used just like [AutoCompleteTextView](http://developer.android.com/reference/android/widget/AutoCompleteTextView.html).
@@ -51,13 +51,13 @@ gradle:
 For normal look use (BetterSpinner):
 
 ```groovy
-compile 'com.weiwangcn.betterspinner:library:1.0.9'
+compile 'com.weiwangcn.betterspinner:library:1.1.0'
 ```
 
 If you have appcompat-v7 in your dependencies make sure to exclude it :
 
 ```groovy
-compile ('com.weiwangcn.betterspinner:library:1.0.9') {
+compile ('com.weiwangcn.betterspinner:library:1.1.0') {
     exclude group: 'com.android.support', module: 'appcompat-v7'
 }
 ```
@@ -65,13 +65,13 @@ compile ('com.weiwangcn.betterspinner:library:1.0.9') {
 For material look use (MaterrialBetterSpinner):
 
 ```groovy
-compile 'com.weiwangcn.betterspinner:library-material:1.0.9'
+compile 'com.weiwangcn.betterspinner:library-material:1.1.0'
 ```
 
 If you have appcompat-v7 and MaterialEditText in your dependencies make sure to exclude them :
 
 ```groovy
-compile ('com.weiwangcn.betterspinner:library-material:1.0.9') {
+compile ('com.weiwangcn.betterspinner:library-material:1.1.0') {
     exclude group: 'com.android.support', module: 'appcompat-v7'
     exclude group: 'com.rengwuxian.materialedittext', module: 'library'
 }
