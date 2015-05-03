@@ -42,7 +42,7 @@ String[] COUNTRIES = getResources().getStringArray(R.array.countries_list);
 
 For usage of MaterialEditText 2.0.3, check it out [here](https://github.com/rengwuxian/MaterialEditText/wiki)
 
-If you want to use material style AutoCompleteTextView, simplely replace BetterSpinner with MaterialBetterSpinner.
+If you want to use material style AutoCompleteTextView, simply replace BetterSpinner with MaterialBetterSpinner.
 
 ## Download
 BetterSpinner is now pushed to Maven Central as an AAR, so you just need to add the following dependency to your `build.gradle`.
