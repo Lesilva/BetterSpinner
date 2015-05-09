@@ -21,7 +21,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.rengwuxian.materialedittext:library:2.0.3'
+    compile 'com.rengwuxian.materialedittext:library:2.1.3'
 }
 
 apply from: '../maven_push.gradle'
