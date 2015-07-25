@@ -56,26 +56,27 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN: {
-                startClickTime = Calendar.getInstance().getTimeInMillis();
-                break;
-            }
-            case MotionEvent.ACTION_UP: {
-                long clickDuration = Calendar.getInstance().getTimeInMillis() - startClickTime;
-                if (clickDuration < MAX_CLICK_DURATION) {
-                    if (isPopup) {
-                        dismissDropDown();
-                        isPopup = false;
-                    } else {
-                        requestFocus();
-                        showDropDown();
-                        isPopup = true;
-                    }
-                }
-            }
-        }
+		if(this.isEnabled()) {
+			switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN: {
+					startClickTime = Calendar.getInstance().getTimeInMillis();
+					break;
+				}
+				case MotionEvent.ACTION_UP: {
+					long clickDuration = Calendar.getInstance().getTimeInMillis() - startClickTime;
+					if (clickDuration < MAX_CLICK_DURATION) {
+						if (isPopup) {
+							dismissDropDown();
+							isPopup = false;
+						} else {
+							requestFocus();
+							showDropDown();
+							isPopup = true;
+						}
+					}
+				}
+			}
+		}
 
         return super.onTouchEvent(event);
     }
