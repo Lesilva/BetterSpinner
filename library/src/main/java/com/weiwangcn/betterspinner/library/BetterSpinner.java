@@ -56,7 +56,9 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
+        if (!isEnabled())
+            return false;
+            
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
                 startClickTime = Calendar.getInstance().getTimeInMillis();
