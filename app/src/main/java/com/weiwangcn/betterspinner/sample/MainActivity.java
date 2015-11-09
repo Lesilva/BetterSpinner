@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.weiwangcn.betterspinner.R;
 import com.weiwangcn.betterspinner.library.BetterSpinner;
@@ -38,6 +41,14 @@ public class MainActivity extends ActionBarActivity {
         spinner1.setAdapter(adapter);
         spinner2.setAdapter(adapter);
 
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, parent.getAdapter().getItem(position).toString(), Toast.LENGTH_SHORT).show();
+            }
+        };
+        spinner1.setOnItemClickListener(listener);
+        spinner2.setOnItemClickListener(listener);
     }
 
 

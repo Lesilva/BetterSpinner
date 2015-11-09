@@ -6,32 +6,23 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 
-import java.util.Calendar;
+public class BetterSpinner extends AutoCompleteTextView {
 
-public class BetterSpinner extends AutoCompleteTextView implements AdapterView.OnItemClickListener {
-
-    private static final int MAX_CLICK_DURATION = 200;
-    private long startClickTime;
     private boolean isPopup;
 
     public BetterSpinner(Context context) {
         super(context);
-        setOnItemClickListener(this);
     }
 
     public BetterSpinner(Context arg0, AttributeSet arg1) {
         super(arg0, arg1);
-        setOnItemClickListener(this);
     }
 
     public BetterSpinner(Context arg0, AttributeSet arg1, int arg2) {
         super(arg0, arg1, arg2);
-        setOnItemClickListener(this);
     }
 
     @Override
@@ -58,22 +49,14 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
     public boolean onTouchEvent(MotionEvent event) {
 
         switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN: {
-                startClickTime = Calendar.getInstance().getTimeInMillis();
-                break;
-            }
             case MotionEvent.ACTION_UP: {
-                long clickDuration = Calendar.getInstance().getTimeInMillis() - startClickTime;
-                if (clickDuration < MAX_CLICK_DURATION) {
-                    if (isPopup) {
-                        dismissDropDown();
-                        isPopup = false;
-                    } else {
-                        requestFocus();
-                        showDropDown();
-                        isPopup = true;
-                    }
+                if (isPopup) {
+                    dismissDropDown();
+                } else {
+                    requestFocus();
+                    showDropDown();
                 }
+                break;
             }
         }
 
@@ -81,7 +64,14 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void showDropDown() {
+        super.showDropDown();
+        isPopup = true;
+    }
+
+    @Override
+    public void dismissDropDown() {
+        super.dismissDropDown();
         isPopup = false;
     }
 
@@ -94,5 +84,4 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
         }
         super.setCompoundDrawablesWithIntrinsicBounds(left, top, right, bottom);
     }
-
 }
