@@ -12,23 +12,23 @@ import com.weiwangcn.betterspinner.R;
 import com.weiwangcn.betterspinner.library.BetterSpinner;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    @InjectView(R.id.spinner1)
+    @Bind(R.id.spinner1)
     BetterSpinner spinner1;
 
-    @InjectView(R.id.spinner2)
+    @Bind(R.id.spinner2)
     MaterialBetterSpinner spinner2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         String[] list = getResources().getStringArray(R.array.month);
 
