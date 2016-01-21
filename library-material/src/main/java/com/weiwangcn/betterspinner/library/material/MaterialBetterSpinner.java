@@ -6,34 +6,25 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 
 import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
 
-import java.util.Calendar;
 
+public class MaterialBetterSpinner extends MaterialAutoCompleteTextView {
 
-public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implements AdapterView.OnItemClickListener {
-
-    private static final int MAX_CLICK_DURATION = 200;
-    private long startClickTime;
     private boolean isPopup;
 
     public MaterialBetterSpinner(Context context) {
         super(context);
-        setOnItemClickListener(this);
     }
 
-    public MaterialBetterSpinner(Context arg0, AttributeSet arg1) {
-        super(arg0, arg1);
-        setOnItemClickListener(this);
+    public MaterialBetterSpinner(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
-    public MaterialBetterSpinner(Context arg0, AttributeSet arg1, int arg2) {
-        super(arg0, arg1, arg2);
-        setOnItemClickListener(this);
+    public MaterialBetterSpinner(Context context, AttributeSet attrs, int style) {
+        super(context, attrs, style);
     }
 
     @Override
@@ -60,22 +51,14 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     public boolean onTouchEvent(MotionEvent event) {
 
         switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN: {
-                startClickTime = Calendar.getInstance().getTimeInMillis();
-                break;
-            }
             case MotionEvent.ACTION_UP: {
-                long clickDuration = Calendar.getInstance().getTimeInMillis() - startClickTime;
-                if (clickDuration < MAX_CLICK_DURATION) {
-                    if (isPopup) {
-                        dismissDropDown();
-                        isPopup = false;
-                    } else {
-                        requestFocus();
-                        showDropDown();
-                        isPopup = true;
-                    }
+                if (isPopup) {
+                    dismissDropDown();
+                } else {
+                    requestFocus();
+                    showDropDown();
                 }
+                break;
             }
         }
 
@@ -83,7 +66,14 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void showDropDown() {
+        super.showDropDown();
+        isPopup = true;
+    }
+
+    @Override
+    public void dismissDropDown() {
+        super.dismissDropDown();
         isPopup = false;
     }
 
