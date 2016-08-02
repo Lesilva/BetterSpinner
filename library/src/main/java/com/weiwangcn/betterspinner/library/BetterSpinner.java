@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+import android.widget.ListView;
 
 import java.util.Calendar;
 
@@ -18,6 +19,7 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
     private static final int MAX_CLICK_DURATION = 200;
     private long startClickTime;
     private boolean isPopup;
+    private int mPosition = ListView.INVALID_POSITION;
 
     public BetterSpinner(Context context) {
         super(context);
@@ -83,7 +85,8 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        mPosition = position;
         isPopup = false;
     }
 
@@ -97,4 +100,7 @@ public class BetterSpinner extends AutoCompleteTextView implements AdapterView.O
         super.setCompoundDrawablesWithIntrinsicBounds(left, top, right, bottom);
     }
 
+    public int getPosition() {
+        return mPosition;
+    }
 }

@@ -1,5 +1,7 @@
 package com.weiwangcn.betterspinner.library.material;
 
+import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
+
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -9,8 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-
-import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
+import android.widget.ListView;
 
 import java.util.Calendar;
 
@@ -20,6 +21,7 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     private static final int MAX_CLICK_DURATION = 200;
     private long startClickTime;
     private boolean isPopup;
+    private int mPosition = ListView.INVALID_POSITION;
 
     public MaterialBetterSpinner(Context context) {
         super(context);
@@ -85,7 +87,8 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        mPosition = position;
         isPopup = false;
     }
 
@@ -99,4 +102,7 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
         super.setCompoundDrawablesWithIntrinsicBounds(left, top, right, bottom);
     }
 
+    public int getPosition() {
+        return mPosition;
+    }
 }
