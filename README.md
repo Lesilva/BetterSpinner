@@ -2,6 +2,8 @@
 
 # BetterSpinner
 
+[![Join the chat at https://gitter.im/Lesilva/BetterSpinner](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Lesilva/BetterSpinner?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-BetterSpinner-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1707)
 
 If you like developing Android, you must "hate" Spinners. I had countless issues with Spinners and I decided to make a new one. BetterSpinner is using AutoCompleteTextView to do what a Spinner really should do.
