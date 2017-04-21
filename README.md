@@ -1,4 +1,4 @@
-![Banner](./screenshot/BetterSpinner Banner.jpg)
+![Banner](./screenshot/BetterSpinner_Banner.jpg)
 
 # BetterSpinner
 
