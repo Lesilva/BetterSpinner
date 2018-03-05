@@ -22,7 +22,7 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     private long startClickTime;
     private boolean isPopup;
     private int mPosition = ListView.INVALID_POSITION;
-
+    private  AdapterView.OnItemClickListener callback;
     public MaterialBetterSpinner(Context context) {
         super(context);
         setOnItemClickListener(this);
@@ -90,6 +90,13 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
         mPosition = position;
         isPopup = false;
+         try{
+              if(null != this.callback){
+                this.callback.onItemClick(adapterView,view,i,l);
+              }
+        }catch (Exception e){
+          this.callback = null;
+        }
     }
 
     @Override
@@ -105,4 +112,13 @@ public class MaterialBetterSpinner extends MaterialAutoCompleteTextView implemen
     public int getPosition() {
         return mPosition;
     }
+    
+    public void setOnItemClick(AdapterView.OnItemClickListener callback) {
+    this.callback = callback;
+  }
+    
+  public void clearSelection(){
+    setText("");
+    mPosition = ListView.INVALID_POSITION;
+  }
 }
